@@ -1,0 +1,33 @@
+[project]
+src = "src"
+out = "out"
+dot_env = ".env"
+dependencies = ["snekmate"]
+
+[networks.pyevm]
+is_zksync = false
+
+[networks.anvil]
+url = "http://127.0.0.1:8545"
+prompt_live = false
+save_to_db = false
+chain_id = 31337
+
+[networks.sepolia]
+url = "https://ethereum-sepolia-rpc.publicnode.com"
+chain_id = 11155111
+
+[networks.zksync-sepolia]
+url = "https://sepolia.era.zksync.dev"
+chain_id = 300
+is_zksync = true
+prompt_live = true
+
+[networks.AK]
+url = "https://virtual.mainnet.eu.rpc.tenderly.co/5e4c776b-aee0-4445-8b6a-f4765e588b82"
+chain_id = 2007
+prompt_live = true
+save_to_db = false
+default_account_name = "ak"
+
+# You can view all configuration options at https://cyfrin.github.io/moccasin/all_moccasin_toml_parameters.html
